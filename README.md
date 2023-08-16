@@ -10,10 +10,10 @@ This is my first experience with Rails. I will be using Rails default database, 
 
 ## Frontend
 ---
-### React Native
+### React Native - Mobile App
 
-This is more learning experience with React Native and without using Expo. I will be using JavaScript.
+This is more learning experience with React Native. I will be using JavaScript.
 
-### Flutter
+### Flutter - Web Application
 
 This will be my first experience with Flutter. 

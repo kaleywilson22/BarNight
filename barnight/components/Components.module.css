@@ -1,0 +1,25 @@
+
+.textInput {
+    display: block;
+    font-size: 20px;
+    font-family: 'space-mono';
+    font-weight: normal;
+    font-variant: small-caps;
+    color: #fff;
+    padding-top: 20px;
+    margin: 0 10%;
+
+}
+.textInput::before {
+   opacity: .10;
+}
+
+.textInput::after {
+    opacity: 0;
+}
+
+.inputLine {
+    display: block;
+    border: 1px solid #fff;
+    margin: 0 10%;
+}

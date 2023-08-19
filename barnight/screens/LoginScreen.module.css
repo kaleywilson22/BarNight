@@ -43,6 +43,13 @@
     align-self: center;
 }
 
+.buttonText{
+    font-size: 20px;
+    font-family: 'space-mono';
+    font-weight: bolder;
+    align-self: center;
+}
+
 
 .button{
     align-self: center;
@@ -60,5 +67,13 @@
     padding: 2px;
      margin: auto;
     
+}
+
+.error {
+    font-size: 15px;
+    font-family: 'space-mono';
+    font-weight: normal;
+    align-self: center;
+    color: red;
 }
 

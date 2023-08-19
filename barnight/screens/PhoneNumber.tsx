@@ -12,17 +12,23 @@ import { Text, View } from "../components/Themed";
 import style from "./LoginScreen.module.css";
 import { RootStackScreenProps } from "../types";
 import NumberInput from "../components/NumberInput";
+import { useState } from "react";
 
 export default function CreateWithPhone({
   navigation
 }: RootStackScreenProps<"CreateWithPhone">) {
-  var num_short = false;
+  const [isNumValid, setIsNumValid] = useState(false);
+  const [number, setNumber] = useState('')
 
-  function sendCode(num: string) {
-    if(num.length < 10){
-      num_short = true;
+  function sendCode() {
+    if(number.length < 10){
+      setIsNumValid(true);
+      return;
+    }else{
+      navigation.push("VerifyAccount", {accountType: "phone"})
     }
   }
+  
   return (
     <SafeAreaView style={style.safeview}>
       <View style={[style.child_container]}>
@@ -30,12 +36,14 @@ export default function CreateWithPhone({
         <NumberInput
           styles={{ alignSelf: "center" }}
           placeholder="1234567890" 
+          onChangeText = {(val: string) => (setNumber(val))}
+          maxLength={10}
         />
-        {num_short? <Text style={style.header1}>phone</Text> : null
+        {isNumValid ? <Text style={style.error}>Invalid Phone Number</Text> : null
         }
         
-        <Pressable style={style.button} onPress={() => navigation.push("VerifyAccount", {accountType: "phone"})}>
-          <Text style={style.header1}>Send Code</Text>
+        <Pressable style={style.button} onPress={() => sendCode()}>
+          <Text style={style.buttonText}>Send Code</Text>
         </Pressable>
       </View>
       <View style={[style.child_container, { paddingTop: 30 }]}>

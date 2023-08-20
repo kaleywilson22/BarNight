@@ -18,6 +18,7 @@ export type RootStackParamList = {
   LoginScreen: undefined;
   CreateAccount: undefined;
   CreateWithPhone: undefined;
+  CreateWithEmail: undefined;
   VerifyAccount: {accountType: string};
   Modal: undefined;
   NotFound: undefined;

@@ -34,9 +34,24 @@ export default function VerifyAccount({route, navigation}: RootStackScreenProps<
         {isVerified ? <Text style={style.error}>Invalid Phone Number</Text> : null
         }
         
-        <Pressable style={style.button} onPress={() => console.log("yes")}>
+        <Pressable style={style.button} onPress={() => navigation.push}>
           <Text style={style.buttonText}>Verifiy</Text>
         </Pressable>
+        <View style={[style.child_container, { paddingTop: 30 }]}>
+        <Pressable
+          onPress={() => navigation.goBack()}
+          style={[
+            {
+              borderStyle: "solid",
+              borderColor: "#fff",
+              borderBottomWidth: 1,
+            },
+            style.button1,
+          ]}
+        >
+          <Text style={style.text}>go back</Text>
+        </Pressable>
+      </View>
         </SafeAreaView>
     )
 }

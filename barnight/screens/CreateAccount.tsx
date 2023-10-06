@@ -38,17 +38,19 @@ export default function CreateAccount({
         <View style={[style.child_container, { paddingTop: 30 }]}>
           <Pressable
             onPress={() => navigation.navigate("LoginScreen")}
-            style={[ 
+            style={[
               style.button1,
               {
                 borderStyle: "solid",
                 borderColor: "#fff",
                 borderBottomWidth: 1,
-                marginTop: 15
+                marginTop: 15,
               },
             ]}
           >
-            <Text style={[style.text, {textTransform: 'uppercase'}]}>go back</Text>
+            <Text style={[style.text, { textTransform: "uppercase" }]}>
+              go back
+            </Text>
           </Pressable>
         </View>
       </View>

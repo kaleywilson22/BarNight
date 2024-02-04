@@ -1,3 +1,4 @@
 {
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+    "cmake.sourceDirectory": "C:/Users/kaley/OneDrive/Documents/BarNight/BarNight/node_modules/expo-modules-core/android/src/fabric"
 }
